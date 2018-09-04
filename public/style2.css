@@ -7,13 +7,14 @@
   border: 10px solid green;
   margin-left: -10px;
   margin-top: -10px;
+
 }
-#landEnco{
+.landEnco{
   background-image: url("https://www.sppoweb.hku.hk/vision2016-2025/images/160536-hku-website-ang-green_f.gif?crc=524139048");
   background-position: -250px;
   background-size: 2180px;
-  background: rotate(10px)
 }
+
 .headButt{
 background-color: green;
 border: 5px solid green;
@@ -24,21 +25,24 @@ height: 50px;
 font-size: 30px;
 font-weight: bold;
 margin-top: 10px;
-}
+  }
 .headButt:hover{
   background-color: white;
   border: 5px solid white;
   color: #40cec0;
 }
 #Sign-in{
-  border-right: 1px solid white;
   border-left: 1px solid white;
+  float: right;
+
 }
 #login{
   border-right: 1px solid white;
+  border-left: 1px solid white;
+  float: right;
 }
 #about{
-  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 #landBod{
   height: 400px;

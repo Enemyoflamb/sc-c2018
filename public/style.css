@@ -1,13 +1,4 @@
-#login {
-  font-size: 25px;
-  text-align: center;
-  margin-top: 180px;
-  font-family: 'Share', cursive;
-  position: static;
-  z-index: -1;
-}
-
-#SignIn{
+form {
   padding-top:60px;
   font-size: 25px;
   text-align: center;
@@ -31,13 +22,7 @@
 #EndLogo{
   color: #40cec0;
 }
-/*#line {
-  top: 0px;
-  text-align: center;
-  image-orientation: flip;
-  position: inherit;
-}
-*/
+
 .loginForm{
   border-radius: 4px;
   border-color: black;
@@ -94,16 +79,10 @@
   height: 28px;
 
 }
-#logBod{
+.bkgd{
   background-image: url("https://www.sppoweb.hku.hk/vision2016-2025/images/160536-hku-website-ang-green_f.gif?crc=524139048");
   background-position: 0px;
-  background-size: 1400px;
-}
-#SignBod{
-  background-image: url("https://www.sppoweb.hku.hk/vision2016-2025/images/160536-hku-website-ang-green_f.gif?crc=524139048");
-  background-position: 00px;
   background-size: 1800px;
-
 }
 #fillSide{
   border-left: solid;
@@ -112,7 +91,7 @@
 .wrapper {
   padding: 50px;
 }
-#LogButton{
+#logButton{
   color: #FFFFFF;
   background-color: green;
   height: 30px;
@@ -131,6 +110,7 @@
 .LoI{
   font-size: 3.5vw;
   font-weight: bold;
+  margin-left: 0px;
 }
 /*#line{
   margin-top: 100px;
