@@ -1,38 +1,37 @@
 form {
-  padding-top:60px;
-  font-size: 25px;
+  padding-top: 60px;
   text-align: center;
   margin-top: 195px;
-  font-family: 'Share', cursive;
-  position: static;
+  font: 25px Share, cursive;
   z-index: -1;
 }
 .title{
   font-family: 'Share', cursive;
-  font-weight: 80vw;
   text-align: center;
   font-size: 60px;
 }
-.Stitle{
-  font-family: 'Share', cursive;
-  font-weight: 80vw;
-  text-align: center;
-  font-size: 60px;
-}
+
 #EndLogo{
   color: #40cec0;
 }
 
-.loginForm{
-  border-radius: 4px;
-  border-color: black;
+.inputBox {
+  /*border-radius: 4px;
+  border-color: black;*/
+  border: none;
+  border-top: 4px solid #FFF;
+  border-bottom: 4px ridge #AAA;
+  font: 22px Share, cursive;
+
+  transition: border-bottom 0.3s ease;
 }
-.loginForm:focus{
-  border-bottom: 5px solid #FFFFE0;
-  background-color: #FFFFE0;
-  border: 4px solid black;
+.inputBox:hover {
+  border-bottom: 4px ridge #888;
 }
-.body{
+.inputBox:focus {
+  border-bottom: 4px solid #000;
+}
+.body {
   margin: 0;
   padding: 0;
 }
@@ -43,7 +42,6 @@ form {
   margin-left: -15px;
   margin-top: -22px;
   margin-right: -8px;
-
 }
 #smName{
   margin-right: 150px;
@@ -61,15 +59,15 @@ form {
   border-right: 90vw solid #ffffff;
   background-color: #fff;
 }
-/*
-.triangle{
-  height: 0;
-  width: 0;
-  border-left: 500px solid #dff8ec;
-  border-right: 500px solid transparent;
-  border-bottom: 500px solid transparent;
+
+.submit_button {
+  color: #FFFFFF;
+  background-color: green;
+  height: 30px;
+  border-radius: 3px;
+  border: 2px solid #000;
+  margin: 10px;
 }
-*/
 
 #signUplead{
   border-radius: 3px;
@@ -77,7 +75,6 @@ form {
   background-color: green;
   color: white;
   height: 28px;
-
 }
 .bkgd{
   background-image: url("https://www.sppoweb.hku.hk/vision2016-2025/images/160536-hku-website-ang-green_f.gif?crc=524139048");
@@ -90,14 +87,6 @@ form {
 }
 .wrapper {
   padding: 50px;
-}
-#logButton{
-  color: #FFFFFF;
-  background-color: green;
-  height: 30px;
-  border: solid;
-  border-color: Black;
-  border-radius: 5px;
 }
 .SoI{
   margin-left: 0px;

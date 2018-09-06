@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang='en' dir='ltr'>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
-    <title></title>
-    <h1 class="Stitle">Smart<span class="Stitle" id="EndLogo">Chart</span></h1>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='style.css' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Share:400,400i,700,700i' rel='stylesheet'>
+    <title>SmartChart Login</title>
+    <script src='https://www.gstatic.com/firebasejs/4.8.0/firebase.js'></script>
+    <script src='./init.js'></script>
+    <script src='./auth.js'></script>
   </head>
   <body class='bkgd'>
-    <div id="login" >
+    <h1 class='title'>Smart<span id='EndLogo'>Chart</span></h1>
+    <div id='login' >
       <form>
-        <span class="LoI"> Log</span>
-        <span id="in" class="LoI">- In </span><br>
-         &nbsp &nbsp &nbsp Email:
-        <input class="loginForm"><br>
-          Password:
-        <input type="password" class="loginForm"><br>
-        <div id="LogButtonOut">
-          <input id="logButton" type="submit"  value="Log In"><br>
-          <input type="button" onclick="location.href='signup.html';" value="Sign-Up" id="signUplead">
+        <!--span class='LoI'>Log</span>
+        <span id='in' class='LoI'>- In </span><br-->
+
+        <input id='email' class='inputBox' placeholder='📧 email'><br>
+        <input id='password' type='password' class='inputBox' placeholder='🔑 password'><br>
+
+        <input class='submit_button' type='button' value='Log in' onclick='login()'>
+        <!--input class='submit_button' type='button' value='Signup' onclick='location.href='signup.html';'-->
+
+        <div>
+          <a href='signup.html' style='margin-top: 2em'> Don't have an account? </a>
         </div>
-      <div class="triangle"></div>
       </form>
     </div>
-
   </body>
 </html>

@@ -2,25 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-<link href = "style.css" type ="text/css" rel = "stylesheet" >
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
-
-    <title></title>
+    <link href = "style.css" type ="text/css" rel = "stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
+    <title>SmartChart Signup</title>
+    <script src='https://www.gstatic.com/firebasejs/4.8.0/firebase.js' defer></script>
+    <script src='./init.js' defer></script>
+    <script src='./auth.js' defer></script>
     <h1 class="title">Smart<span class="title" id="EndLogo">Chart</span></h1>
   </head>
   <body class='bkgd'>
     <div id="SignIn" >
       <form>
-        <span class = "SoI"> Sign</span>
-        <span id = "in" class = "SoI">- Up </span><br>
-        &nbsp &nbsp &nbsp Email:
-        <input class="loginForm"><br>
-        Password:
-        <input  type="password" class="loginForm"><br>
-
-      <input type="button" onclick="location.href='http://google.com';" value="Sign-Up" id="signUplead">
-      <div class = "triangle"></div>
+        <p> Email<input id='email' class='inputBox' placeholder='📧 email'></p>
+        <p> Password<input id='password' type='password' class='inputBox' placeholder='🔑 password'></p>
+        <input class='submit_button' type='button' value='Log in' onclick='register();'>
       </form>
     </div>
 
