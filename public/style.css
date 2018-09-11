@@ -38,14 +38,18 @@ form {
 .nbsp{
   font-size: 25px;
 }
-.error{
+
+.error {
   margin-top: 0.3vw;
   font-size: 1vw;
   color: red;
   position: relative;
-  display: none;
-
+  display: initial;
 }
+.errorHidden {
+  display: none;
+}
+
 .submit_button {
   color: #FFFFFF;
   background-color: #00ced1;
