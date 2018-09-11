@@ -1,5 +1,5 @@
 form {
-  padding-top: 60px;
+  padding-top: 40px;
   text-align: center;
   margin-top: 195px;
   font: 25px Share, cursive;
@@ -35,15 +35,27 @@ form {
   margin: 0;
   padding: 0;
 }
+.nbsp{
+  font-size: 25px;
+}
+.error{
+  margin-top: 0.3vw;
+  font-size: 1vw;
+  color: red;
+  position: relative;
+  display: none;
 
-
+}
 .submit_button {
   color: #FFFFFF;
-  background-color: green;
+  background-color: #00ced1;
   height: 30px;
-  border-radius: 3px;
-  border: 2px solid #000;
+  border-radius: 5px;
+  border: 3px solid #000;
   margin: 10px;
+  font-family: 'Share', cursive;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 #signUplead{
@@ -51,7 +63,7 @@ form {
   border-color: #000000;
   background-color: green;
   color: white;
-  height: 28px;
+  height: 40px;
 }
 .bkgd{
   background-image: url("https://www.sppoweb.hku.hk/vision2016-2025/images/160536-hku-website-ang-green_f.gif?crc=524139048");

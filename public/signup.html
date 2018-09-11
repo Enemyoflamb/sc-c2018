@@ -14,9 +14,19 @@
   <body class='bkgd'>
     <div id="SignIn" >
       <form>
-        <p> Email<input id='email' class='inputBox' placeholder='📧 email'></p>
-        <p> Password<input id='password' type='password' class='inputBox' placeholder='🔑 password'></p>
-        <input class='submit_button' type='button' value='Log in' onclick='register();'>
+        <!--span class='LoI'>Log</span>
+        <span id='in' class='LoI'>- In </span><br-->
+
+        <input id='email' class='inputBox' placeholder='📧 email'><br>
+        <input id='password' type='password' class='inputBox' placeholder='🔑 password'><br>
+        <span class="error" id="invalidEmail">*Invalid Email <span class="nbsp">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp</span></span><br>
+        <span class="error" id="invalidPassword">*Invalid Password <span class="nbsp">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp</span></span><br>
+        <input class='submit_button' type='button' value='Register' onclick='register()'>
+        <!--input class='submit_button' type='button' value='Signup' onclick='location.href='signup.html';'-->
+
+        <div>
+          <a href='login.html' style='margin-top: 2em'> Have an account? </a>
+        </div>
       </form>
     </div>
 
