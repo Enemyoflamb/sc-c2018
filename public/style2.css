@@ -7,14 +7,15 @@
   border: 10px solid green;
   margin-left: -10px;
   margin-top: -10px;
-
 }
 .landEnco{
   background-image: url("https://www.sppoweb.hku.hk/vision2016-2025/images/160536-hku-website-ang-green_f.gif?crc=524139048");
   background-position: -250px;
   background-size: 2180px;
 }
-
+#logo{
+  transform: rotate(11deg);
+}
 .headButt{
 background-color: green;
 border: 5px solid green;
@@ -63,4 +64,85 @@ margin-top: 10px;
 }
 #logo{
   margin-top: 180px;
+}
+/* HomePage */
+.logout{
+  color: #ffffff;
+  float: right;
+  height: 45px;
+  width: 115px;
+  border-radius: 6px;
+  border: 5px solid #006400;
+  background-color: #006400;
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: -10px;
+}
+.logout:hover{
+  background-color: white;
+  color: #40cec0;
+  border-color: white;
+}
+#logout{
+  border-right: 5px solid white;
+  border-left: 5px solid white;
+}
+#homBod{
+  margin-top: 40px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  border-radius: 50px;
+  border-left: 5px solid  transparent;
+  border-top: 5px solid transparent;
+  border-right: 5px solid  transparent;
+  border-bottom: 5px solid transparent;
+  padding: 10px;
+  background-color: #fafafa;
+}
+.class{
+  width: 97%;
+  height: 30px;
+  border-radius: 5px;
+  border-right: 1px solid grey;
+  margin-top: 10px;
+  border-bottom: 3px solid grey;
+  border-top: 3px solid transparent;
+  background-color: #EBEBEB;
+  color: #40cec0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+  padding-top: 0;
+}
+.request{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+}
+.class:hover{
+  background-color: #F2F2F2;
+  border-width: 3px;
+  font-size: 16px;
+  border-right: 3px solid #40cec0;
+}
+#leftBar{
+  margin-left: 0px;
+  width: 33%;
+  background-color: red;
+  height: 100%;
+}
+#listClass{
+  text-align: center;
+  font-size: 25px;
+  color: #40cec0;
+  margin-top: -30px;
+}
+#listBorder{
+  border-bottom: 3px solid grey;
+  margin-top: -20px;
+}
+.opener{
+    background-image: linear-gradient(to right, #40cec0, #ADD8E6);
 }
