@@ -35,30 +35,7 @@ form {
   margin: 0;
   padding: 0;
 }
-.opener {
-  background-color: #dff8ec;
-  color: #ffffff;
-  text-align: left;
-  margin-left: -15px;
-  margin-top: -22px;
-  margin-right: -8px;
-}
-#smName{
-  margin-right: 150px;
-  margin-top: -65px;
-  font-family: 'Share', cursive;
-  font-weight: 900;
-  font-size: 70px;
-  float: right;
-  position: relative;
-}
-.opener::after {
-  display: block;
-  content: "";
-  border-top: 90px solid #dff8ec;
-  border-right: 90vw solid #ffffff;
-  background-color: #fff;
-}
+
 
 .submit_button {
   color: #FFFFFF;

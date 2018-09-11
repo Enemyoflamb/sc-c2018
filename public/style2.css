@@ -8,6 +8,30 @@
   margin-left: -10px;
   margin-top: -10px;
 }
+.opener {
+  background-color: #dff8ec;
+  color: #ffffff;
+  text-align: left;
+  margin-left: -15px;
+  margin-top: -22px;
+  margin-right: -8px;
+}
+#smName{
+  margin-top: -20px;
+  font-family: 'Share', cursive;
+  font-weight: 900;
+  font-size: 70px;
+  float: left;
+  position: relative;
+  margin-left: 50px;
+}
+.opener::after {
+  display: block;
+  content: "";
+  border-top: 90px solid #40cec0;
+  border-right: 90vw solid #ffffff;
+  background-color: #40cec0;
+}
 .landEnco{
   background-image: url("https://www.sppoweb.hku.hk/vision2016-2025/images/160536-hku-website-ang-green_f.gif?crc=524139048");
   background-position: -250px;
