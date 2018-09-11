@@ -1,3 +1,4 @@
+
 #landHead{
   width: 99.85%;
   height: 70px;
@@ -96,8 +97,8 @@ margin-top: 10px;
   height: 45px;
   width: 115px;
   border-radius: 6px;
-  border: 5px solid #006400;
-  background-color: #006400;
+  border: 5px solid #40cec0;
+  background-color: #40cec0;
   font-size: 21px;
   font-weight: bold;
   margin-top: -10px;
@@ -124,6 +125,8 @@ margin-top: 10px;
   border-bottom: 5px solid transparent;
   padding: 10px;
   background-color: #fafafa;
+  font: 25px Share, cursive;
+
 }
 .class{
   width: 97%;
@@ -139,6 +142,26 @@ margin-top: 10px;
   margin-right: auto;
   font-size: 15px;
   padding-top: 0;
+}
+#newClass{
+  height: 2.313vw;
+  background-color: #40cec0;
+  font-size: 1.35vw;
+  float: right;
+  margin-top: -4.5vw;
+  border-radius: 5px;
+  border: 5px solid #40cec0;
+  color: white;
+  font-family: 'Share', cursive;
+  font-weight: bold;
+  margin-right: 30px;
+  transition: background-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+#newClass:hover{
+  background-color: #20aea0;
+  border-color: #20aea0;
+  /*color: #40cec0;*/
 }
 .request{
   margin-top: auto;
