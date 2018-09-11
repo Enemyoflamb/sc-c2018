@@ -18,9 +18,11 @@ function register(){
 			case "auth/email-already-in-use":
 			case "auth/invalid-email":
 				// unhide "bad email" error
+				document.getElementById('invalidEmail').className = "error";
 				break;
 			case "auth/weak-password":
 				// unhide "weak password" error
+				document.getElementById('invalidPassword').className = "error";
 		}
 	});
 }
