@@ -11,8 +11,9 @@ function update(){
 function register(){
 	update();
 	AUTH.createUserWithEmailAndPassword(email, password).then(function(){
-		// redirect to landing
+		// redirect to login
 		alert("account created!");
+		window.location.assign(window.location.protocol + '//' + window.location.hostname + "/login.html");
 	}).catch(function(error){
 		switch(error.code){
 			case "auth/email-already-in-use":
@@ -31,7 +32,7 @@ function login(){
 	AUTH.signInWithEmailAndPassword(email, password).then(function(){
 		// redirect to landing
 		alert("login successful!");
-
+		window.location.assign(window.location.protocol + '//' + window.location.hostname + "/home.html");
 	}).catch(function(error){
 		alert("login failed :(");
 		document.getElementById('password').value = "";
@@ -42,6 +43,7 @@ function login(){
 function exit(){
 	firebase.auth().signOut().then(function() {
 	  // Sign-out successful.
+	  window.location.assign(window.location.protocol + '//' + window.location.hostname);
 	}).catch(function(error) {
 	  // An error happened.
 	});

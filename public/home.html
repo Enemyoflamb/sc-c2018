@@ -1,52 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<link rel="stylesheet" href="style.css" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
-<link rel="stylesheet" href="style2.css" type="text/css">
-<head>
-    <meta charset="utf-8">
-    <header class="opener">
-    <div class="wrapper">
-      <h5 id = "smName">Smart Chart</h5>
-      <button class="logout"> Log-Out </button>
-
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <header class='opener'>
+    <div class='wrapper'>
+      <h5 id = 'smName'>Smart Chart</h5>
+      <button class='logout' onclick='exit()'> Log-Out </button>
     </div>
     </header>
+    <link rel='stylesheet' href='style.css' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Share:400,400i,700,700i' rel='stylesheet'>
+    <link rel='stylesheet' href='style2.css' type='text/css'>
 
-
-
-
+    <script src='https://www.gstatic.com/firebasejs/4.8.0/firebase.js' defer></script>
+    <script src='./init.js' defer></script>
+    <script src='./auth.js' defer></script>
     <title></title>
   </head>
-
   <body>
-
-    <div id = "fillSide">
-    </div>
-  
-  <div id="homBod">
-    <div id="listClass">
-      <h1> Classes </h1>
-      <button id="newClass">+ New Class</button>
-      <div id="listBorder"></div>
+    <div id='homBod'>
+      <div id='listClass'>
+        <h1> Classes </h1>
+        <button id='newClass'>+ New Class</button>
+        <div id='listBorder'></div>
       </div>
-  <div class="class">
-    <h2 class="request"> Math III Honours </h2>
+      <div class='class'>
+        <h2 class='request'> Math III Honours </h2>
+      </div>
+      <div class='class'>
+        <h2 class='request'> Theoretical Physics: Flat Earth II </h2>
+      </div>
+      <div class='class'>
+        <h2 class='request'> AP Physics </h2>
+      </div>
+      <div class='class'>
+        <h2 class='request'> AP Flat Earth </h2>
+      </div>
+    </div>
   </div>
-  <div class="class">
-    <h2 class="request"> Theoretical Physics: Flat Earth II </h2>
-  </div>
-  <div class="class">
-    <h2 class="request"> AP Physics </h2>
-  </div>
-  <div class="class">
-    <h2 class="request"> AP Flat Earth </h2>
-  </div>
-
-  </div>
-  </div>
-
-
   </body>
 </html>
