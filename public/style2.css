@@ -126,7 +126,9 @@ margin-top: 10px;
   padding: 10px;
   background-color: #fafafa;
   font: 25px Share, cursive;
-
+}
+#homBod {
+    overflow: auto;
 }
 .class{
   width: 97%;
@@ -142,6 +144,14 @@ margin-top: 10px;
   margin-right: auto;
   font-size: 15px;
   padding-top: 0;
+  transition: all 0.3s ease-out;
+}
+.class:hover{
+  background-color: #30aea0;
+  color: white;
+  border-width: 3px;
+  font-size: 16px;
+  border-right: 3px solid #67E6EC;
 }
 #newClass{
   height: 2.313vw;
@@ -155,8 +165,7 @@ margin-top: 10px;
   font-family: 'Share', cursive;
   font-weight: bold;
   margin-right: 30px;
-  transition: background-color 0.3s ease;
-  transition: border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease 0.15s;
 }
 #newClass:hover{
   background-color: #20aea0;
@@ -167,12 +176,6 @@ margin-top: 10px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 10px;
-}
-.class:hover{
-  background-color: #F2F2F2;
-  border-width: 3px;
-  font-size: 16px;
-  border-right: 3px solid #40cec0;
 }
 #leftBar{
   margin-left: 0px;
