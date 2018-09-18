@@ -13,7 +13,12 @@ function register(){
 	AUTH.createUserWithEmailAndPassword(email, password).then(function(){
 		// redirect to login
 		alert("account created!");
-		window.location.assign(window.location.protocol + '//' + window.location.hostname + "/login.html");
+		AUTH.signInWithEmailAndPassword(email, password).then(function(){
+			DB.ref('/' + AUTH.currentUser.uid).set({classes: {}}}).then(() => {
+				console.log('New user data initialized.');
+				window.location.assign(window.location.protocol + '//' + window.location.hostname + "/home.html");
+			}).catch((err) => {console.log(err);});
+		}).catch((err) => {console.log(err);});
 	}).catch(function(error){
 		switch(error.code){
 			case "auth/email-already-in-use":
@@ -27,6 +32,7 @@ function register(){
 		}
 	});
 }
+
 function login(){
 	update();
 	AUTH.signInWithEmailAndPassword(email, password).then(function(){
