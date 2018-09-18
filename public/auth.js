@@ -14,7 +14,7 @@ function register(){
 		// redirect to login
 		alert("account created!");
 		AUTH.signInWithEmailAndPassword(email, password).then(function(){
-			DB.ref('/' + AUTH.currentUser.uid).set({classes: {}}}).then(() => {
+			DB.ref('/' + AUTH.currentUser.uid).set({classes: {}}).then(() => {
 				console.log('New user data initialized.');
 				window.location.assign(window.location.protocol + '//' + window.location.hostname + "/home.html");
 			}).catch((err) => {console.log(err);});

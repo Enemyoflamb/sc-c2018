@@ -1,5 +1,3 @@
-const DB = firebase.database();
-const AUTH = firebase.auth();
 const classArea = document.getElementById("homBod");
 
 DB.ref('/' + AUTH.currentUser.uid).once('value').then(function(snapshot) {
