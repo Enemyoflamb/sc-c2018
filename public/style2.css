@@ -131,7 +131,7 @@ margin-top: 10px;
 #homBod {
     overflow: auto;
 }
-.class{
+#homBod > div{
   width: 97%;
   height: 30px;
   border-radius: 5px;
@@ -147,7 +147,7 @@ margin-top: 10px;
   padding-top: 0;
   transition: all 0.3s ease-out;
 }
-.class:hover{
+#homBod > div:hover{
   background-color: #30aea0;
   color: white;
   border-width: 3px;
@@ -173,7 +173,7 @@ margin-top: 10px;
   border-color: #20aea0;
   /*color: #40cec0;*/
 }
-.request{
+#homBod > div > h2 {
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 10px;
