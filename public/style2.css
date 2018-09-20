@@ -198,12 +198,16 @@ margin-top: 10px;
     background-image: linear-gradient(to right, #40cec0, #ADD8E6);
 }
 /* 9/16 changes (#smName -> .smName) */
-#addStudent{
-  margin-top: 1.7vw;
+.show{
+  margin-top: 2.7vw;
   margin-left: -25vw;
-
+  margin-bottom: 3vw;
+  transition: margin 2s ease;
   }
-.manageButton{
+.show:hover{
+  margin-left: -40vw;
+}
+#participation > button{
   height: 2.313vw;
   background-color: #40cec0;
   font-size: 1.35vw;
@@ -214,7 +218,7 @@ margin-top: 10px;
   font-weight: bold;
   transition: background-color 0.3s ease, border-color 0.3s ease 0.15s;
 }
-.manageButton:hover{
+#participation > button:hover{
   background-color: #20aea0;
   border-color: #20aea0;
   /*color: #40cec0;*/
@@ -240,29 +244,33 @@ margin-top: 10px;
   height: 2.2vw;
 }
 #saveChanges{
-  bottom: 0;
+  bottom: 2vw;
   right: 0;
-  position: absolute;
-  margin-bottom: 2vw;
+  position: sticky;
+  float: right;
   margin-right: 2vw;
 }
 #saveExit{
-  bottom: 0;
+  float: right;
+  bottom: 2vw;
   right: 0;
-  position: absolute;
-  margin-bottom: 5.313vw;
+  position: sticky;
   margin-right: 2vw;
   padding-left: 1.05vw;
   padding-right: 1.05vw;
 }
-/*
 #grid{
-margin-top: 5vw;
-}*/
+  margin-top: -1vw;
+  margin-bottom: 6.4vw;
+height: 93.7vw;
+margin-left: auto;
+margin-right: auto;
+background-size: 9.7vw 11.7vw ;
+background-position: 0vw 0vw;
+background-image: linear-gradient(to right, #e9e9e9 0.13vw, transparent 1px), linear-gradient(to bottom, #e9e9e9  0.13vw  , transparent 1px);
+width: 87.4vw;
+}
 #participation{
-  background-size: 6.5vw 6.4vw ;
-  background-position: 20px 80px;
-  background-image: linear-gradient(to right, #e9e9e9 0.13vw, transparent 1px), linear-gradient(to bottom, #e9e9e9  0.13vw  , transparent 1px);
 }
 th{
   border: 1px solid black;
