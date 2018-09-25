@@ -198,14 +198,19 @@ margin-top: 10px;
     background-image: linear-gradient(to right, #40cec0, #ADD8E6);
 }
 /* 9/16 changes (#smName -> .smName) */
+
 .show{
   margin-top: 2.7vw;
   margin-left: -25vw;
   margin-bottom: 3vw;
-  transition: left 2s 1s ease-out;
   display: all;
-
   }
+  /*
+.show:active{
+  animation-name: left;
+  animation-duration: 2s;
+
+}*/
 
 .hide{
   height: 20vw;
