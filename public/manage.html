@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="style.css" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 <link rel="stylesheet" href="style2.css" type="text/css">
 <script src="interact.js"></script>
   <head>
@@ -18,7 +19,7 @@
   </head>
   <body id="participation">
     <button onclick="hide()" class="show"> + Add Student </button>
-    <div class="hide"> <h1>  Gibberish </h1></div>
+    <div class="hide"><div id="showTab"><i class="em em-arrow_backward" id="backArrow" onclick="hideInfo()"></i><h2 id="tabName"> Student Info </h2></div><div id="hiddenBox"><h1>  </h1></div></div>
     <div id="grid"></div>
     <!--<button id="random" onclick=""> Randomize! </button>
     <div id="verticalSpace">&nbsp </div>

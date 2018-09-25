@@ -1,4 +1,6 @@
-
+body{
+  font-family: 'Share', cursive;
+}
 #landHead{
   width: 99.85%;
   height: 70px;
@@ -204,20 +206,36 @@ margin-top: 10px;
   margin-left: -25vw;
   margin-bottom: 3vw;
   display: all;
+  transition: margin-left 0.4 ease;
   }
   /*
 .show:active{
   animation-name: left;
   animation-duration: 2s;
-
 }*/
-
 .hide{
-  height: 20vw;
-  width: 5%;
-  background-color: #30aea0;
-  display: none;
-  margin-left: -50vw;
+  margin-top: -5.2vw;
+  background-color: #40cec0;
+  display: all;
+  border-radius: 5px;
+  height: 10vw;
+  width: 11vw;
+  position: absolute;
+  margin-left: -40vw;
+  color: white;
+
+}
+#tabName{
+  margin-top: -0vw;
+  margin-left: 2vw;
+}
+#hiddenBox{
+  margin-top: 1vw;
+  width: 20vw;
+  background-color: #40cec0;
+  height: 10vw;
+  border-radius: 5px;
+  margin-top: -1.6vw;
 }
 #participation > button{
   height: 2.313vw;
@@ -289,4 +307,10 @@ th{
 }
 th, table{
   border-collapse: collapse;
+}
+#backArrow{
+  margin-bottom: -2.7vw;
+}
+#showTab{
+  margin-top: -1vw;
 }
