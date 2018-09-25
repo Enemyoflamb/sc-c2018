@@ -5,7 +5,6 @@
 <link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 <link rel="stylesheet" href="style2.css" type="text/css">
-<script src="interact.js"></script>
   <head>
     <meta charset="utf-8">
     <header class="opener">
@@ -18,18 +17,27 @@
     <title></title>
   </head>
   <body id="participation">
-    <button onclick="hide()" class="show"> + Add Student </button>
-    <div class="hide"><div id="showTab"><i class="em em-arrow_backward" id="backArrow" onclick="hideInfo()"></i><h2 id="tabName"> Student Info </h2></div><div id="hiddenBox"><h1>  </h1></div></div>
+    <button onclick="showMenu()" class="show" id="showMenu"> + Add Student </button>
+    <div class="hide" id="hideMenu">
+      <div>
+        <i class="em em-arrow_backward" onclick="hideMenu()"></i>
+        <h2> Student Info </h2>
+      </div>
+      <div>
+        <h3> Student Name </h3>
+      </div>
+    </div>
     <div id="grid"></div>
     <!--<button id="random" onclick=""> Randomize! </button>
     <div id="verticalSpace">&nbsp </div>
     <button id="generate" onclick=""> Generate! </button>-->
     <button id="saveChanges" onclick=""> Save Changes</button>
-    <button id="saveExit" onclick=""> Save & Exit </button>
-  <!--  <div id="grid">
-      <table> <tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr> </table>
--->
-    </div>
+      <button id="saveExit" onclick=""> Save & Exit </button>
+    <!--  <div id="grid">
+        <table> <tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr> </table>
+  -->
+      </div>
     </div>
   </body>
+  <script src="interact.js"></script>
 </html>

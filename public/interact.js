@@ -1,4 +1,16 @@
-function show(){
+var show = document.getElementById('showMenu');
+var hide = document.getElementById('hideMenu');
+
+function showMenu(){
+  show.className = "hide";
+  hide.className = "show";
+}
+function hideMenu(){
+  show.className = "show";
+  hide.className = "hide";
+}
+
+/*function show(){
   var showelem= document.getElementsByClassName("hide")[0];
   var movedRight = -40;
   var show = setInterval(right, 5);
@@ -51,4 +63,4 @@ function hideInfo(){
       showelem.style.marginLeft = moveInfo + "vw";
     }
   }
-}
+}*/
