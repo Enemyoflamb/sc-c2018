@@ -1,14 +1,14 @@
 form {
-  padding-top: 40px;
+  padding-top: 2.7vw;
   text-align: center;
-  margin-top: 195px;
-  font: 25px Share, cursive;
+  margin-top:7.5vw;
+  font: 1.67vw Share, cursive;
   z-index: -1;
 }
 .title{
   font-family: 'Share', cursive;
   text-align: center;
-  font-size: 60px;
+  font-size: 3.7vw;
 }
 
 #EndLogo{
@@ -19,24 +19,24 @@ form {
   /*border-radius: 4px;
   border-color: black;*/
   border: none;
-  border-top: 4px solid #FFF;
-  border-bottom: 4px ridge #AAA;
-  font: 22px Share, cursive;
+  border-top: .27vw solid #FFF;
+  border-bottom: .27vw ridge #AAA;
+  font: 1.4vw Share, cursive;
 
   transition: border-bottom 0.3s ease;
 }
 .inputBox:hover {
-  border-bottom: 4px ridge #888;
+  border-bottom: .27vw ridge #888;
 }
 .inputBox:focus {
-  border-bottom: 4px solid #000;
+  border-bottom: .27vw solid #000;
 }
 .body {
   margin: 0;
   padding: 0;
 }
 .nbsp{
-  font-size: 25px;
+  font-size: 1,4vw;
 }
 
 .error {
@@ -53,33 +53,33 @@ form {
 .submit_button {
   color: #FFFFFF;
   background-color: #00ced1;
-  height: 30px;
-  border-radius: 5px;
-  border: 3px solid #000;
-  margin: 10px;
+  height: 2vw;
+  border-radius: 0.3vw;
+  border: 0.2vw solid #000;
+  margin: 0.67vw;
   font-family: 'Share', cursive;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 1vw;
 }
 
 #signUplead{
-  border-radius: 3px;
+  border-radius: 2vw;
   border-color: #000000;
   background-color: green;
   color: white;
-  height: 40px;
+  height: 2.7vw;
 }
 .bkgd{
   background-image: url("https://www.sppoweb.hku.hk/vision2016-2025/images/160536-hku-website-ang-green_f.gif?crc=524139048");
   background-position: 0px;
-  background-size: 1800px;
+  background-size: 117vw;
 }
 #fillSide{
   border-left: solid;
   border-color: #006400;
 }
 .wrapper {
-  padding: 50px;
+  padding: 3.3vw;
 }
 .SoI{
   margin-left: 0px;
