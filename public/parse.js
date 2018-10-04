@@ -3,14 +3,14 @@ function sanitize(HTMLObj){
 }
 function editMode(HTMLObj){
 	HTMLObj.onclick = (event) => {};
-	HTMLObj.innerHTML = "<textarea id='textarea' rows='1' cols='20' maxlength='18' style='resize: none' onkeypress='sanitize(this)' onblur='sanitize(this)' onpaste='sanitize(this)'>" + HTMLObj.innerHTML + "</textarea> <span id='" + HTMLObj.innerHTML + "' onclick='save(this)'> &#10004 </span>";
+	HTMLObj.innerHTML = "<textarea id='textarea' rows='1' cols='34' maxlength='32' style='resize: none' onkeypress='sanitize(this)' onblur='sanitize(this)' onpaste='sanitize(this)'>" + HTMLObj.innerHTML + "</textarea> <span id='" + HTMLObj.innerHTML + "' onclick='save(this)'> &#10004 </span>";
 }
 function save(HTMLObj){
 	let p = HTMLObj.parentElement;
 	let PATH = '/' + AUTH.currentUser.uid + '/classes/' + HTMLObj.id;
 	let NEWPATH = '/' + AUTH.currentUser.uid + '/classes/' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '');
 
-	p.outerHTML = '<h2>' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '') + '</h2>';
+	p.outerHTML = '<h2>' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '').substr(0, 32) + '</h2>';
 
 	if(!p.getElementsByTagName('textarea')[0].value.length){
 		if(confirm(`Are you sure you want to delete the class: ${HTMLObj.id}?`)){
@@ -28,7 +28,7 @@ function save(HTMLObj){
 				DB.ref(NEWPATH).set({
 						students: pstudents
 				}).then(() => {
-					console.log(`Moved class [${PATH}] to [${NEWPATH]}]`)
+					console.log(`Moved class [${PATH}] to [${NEWPATH}]`)
 					loadClasses();
 				});
 			}else{
