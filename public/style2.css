@@ -130,6 +130,18 @@ margin-top: 10px;
   background-color: #fafafa;
   font: 25px Share, cursive;
 }
+textarea {
+  font: 18px Share, cursive;
+  border: none;
+  background-color: none;
+  color: #40cec0;
+  transition: all 0.3s ease-in-out;
+}
+textarea:focus {
+  color: black;
+  background-color: white;
+}
+
 #homBod {
     overflow: auto;
 }
@@ -154,7 +166,6 @@ margin-top: 10px;
   color: white;
   border-width: 3px;
   font-size: 16px;
-  border-right: 3px solid #67E6EC;
 }
 #newClass{
   height: 2.313vw;
