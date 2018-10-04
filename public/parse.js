@@ -3,14 +3,14 @@ function sanitize(HTMLObj){
 }
 function editMode(HTMLObj){
 	HTMLObj.onclick = (event) => {};
-	HTMLObj.innerHTML = "<textarea id='textarea' rows='1' cols='34' maxlength='32' style='resize: none' onkeypress='sanitize(this)' onblur='sanitize(this)' onpaste='sanitize(this)'>" + HTMLObj.innerHTML + "</textarea> <span id='" + HTMLObj.innerHTML + "' onclick='save(this)'> &#10004 </span>";
+	HTMLObj.parentElement.innerHTML = "<textarea id='textarea' rows='1' cols='34' maxlength='32' style='resize: none' onkeypress='sanitize(this)' onblur='sanitize(this)' onpaste='sanitize(this)'>" + HTMLObj.innerHTML + "</textarea> <span id='" + HTMLObj.innerHTML + "' onclick='save(this)'> &#10004 </span>";
 }
 function save(HTMLObj){
 	let p = HTMLObj.parentElement;
 	let PATH = '/' + AUTH.currentUser.uid + '/classes/' + HTMLObj.id;
 	let NEWPATH = '/' + AUTH.currentUser.uid + '/classes/' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '');
 
-	p.outerHTML = '<h2>' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '').substr(0, 32) + '</h2>';
+	p.outerHTML = '<h2><span>' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '').substr(0, 32) + '</span></h2>';
 
 	if(!p.getElementsByTagName('textarea')[0].value.length){
 		if(confirm(`Are you sure you want to delete the class: ${HTMLObj.id}?`)){
@@ -68,12 +68,14 @@ function loadClasses(){
 		let classes = snapshot.val().classes;
 
 		for(var className in classes){
+			var span = document.createElement("span");
 			var h2 = document.createElement("h2");
 			var div = document.createElement("div");
-			h2.innerHTML = className;
-			h2.onclick = (function(event){
+			span.innerHTML = className;
+			span.onclick = (function(event){
 				editMode(this);
 			});
+			h2.appendChild(span);
 			div.appendChild(h2);
 			c.appendChild(div);/*
 			function changeClassName(){
