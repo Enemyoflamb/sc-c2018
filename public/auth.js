@@ -20,7 +20,7 @@ function register(){
 				}
 			}}).then(() => {
 				console.log('New user data initialized.');
-				window.location.assign(window.location.protocol + '//' + window.location.hostname + "/home.html");
+				window.location.href = "/home.html";
 			}).catch((err) => {console.log(err);});
 		}).catch((err) => {console.log(err);});
 	}).catch(function(error){
@@ -42,7 +42,7 @@ function login(){
 	AUTH.signInWithEmailAndPassword(email, password).then(function(){
 		// redirect to landing
 		alert("login successful!");
-		window.location.assign(window.location.protocol + '//' + window.location.hostname + "/home.html");
+		window.location.href = "/home.html";
 	}).catch(function(error){
 		alert("login failed :(");
 		document.getElementById('password').value = "";
@@ -53,7 +53,7 @@ function login(){
 function exit(){
 	firebase.auth().signOut().then(function() {
 	  // Sign-out successful.
-	  window.location.assign(window.location.protocol + '//' + window.location.hostname);
+	  window.location.href = "/";
 	}).catch(function(error) {
 	  // An error happened.
 	});
