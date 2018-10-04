@@ -12,8 +12,13 @@ function save(HTMLObj){
 
 	p.outerHTML = '<h2>' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '') + '</h2>';
 
-	if(!p.getElementsByTagName('textarea')[0].value.length)
-		return alert("Error: Class name cannot be empty!");
+	if(!p.getElementsByTagName('textarea')[0].value.length){
+		if(confirm(`Are you sure you want to delete the class: ${HTMLObj.id}?`)){
+			DB.ref(PATH).remove().then(loadClasses);
+			console.log(`Deleted class [${HTMLObj.id}]`)
+		}
+		return loadClasses();
+	}
 
 	DB.ref(PATH).once('value').then(function(snapshot) {
 		let pstudents = snapshot.val().students;
@@ -23,7 +28,7 @@ function save(HTMLObj){
 				DB.ref(NEWPATH).set({
 						students: pstudents
 				}).then(() => {
-					console.log('Moved class [' + PATH + "] to [" + NEWPATH + "]");
+					console.log(`Moved class [${PATH}] to [${NEWPATH]}]`)
 					loadClasses();
 				});
 			}else{
@@ -45,7 +50,7 @@ function newClass(){
 		DB.ref('/' + AUTH.currentUser.uid + '/classes/New Class No' + n).set({
 			students: ["#0001", "#0002", "#0003"]
 		}).then(() => {
-			console.log("Created new class [New Class No" + n + "]");
+			console.log(`Created new class [New Class No${n}]`);
 			loadClasses();
 		});
 	});
