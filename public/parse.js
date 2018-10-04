@@ -11,17 +11,38 @@ function save(HTMLObj){
 
 	DB.ref(PATH).once('value').then(function(snapshot) {
 		let pstudents = snapshot.val().students;
-		DB.ref(PATH).remove();
-		DB.ref(NEWPATH).set({
-				students: pstudents
-		}).then(() => {
-			console.log('Moved class [' + PATH + "] to [" + NEWPATH + "]");
-			loadClasses();
+		DB.ref(NEWPATH).once('value').then(function(snapshot) {
+			if(snapshot.val() === null){
+				DB.ref(PATH).remove();
+				DB.ref(NEWPATH).set({
+						students: pstudents
+				}).then(() => {
+					console.log('Moved class [' + PATH + "] to [" + NEWPATH + "]");
+					loadClasses();
+				});
+			}else{
+				alert("Error: Conflicting class names.")
+				loadClasses();
+			}
 		});
 	});
 }
 
 AUTH.onAuthStateChanged(loadClasses);
+function newClass(){
+	DB.ref('/' + AUTH.currentUser.uid).once('value').then(function(snapshot) {
+		let classes = snapshot.val().classes;
+		let n = 1;
+		while(classes[("New Class #" + n)])
+			n ++;
+		DB.ref('/' + AUTH.currentUser.uid + '/classes/New Class #' + n).set({
+			students: ["#0001", "#0002", "#0003"]
+		}).then(() => {
+			console.log("Created new class [New Class #" + n + "]");
+			loadClasses();
+		});
+	});
+}
 function loadClasses(){
 	if(AUTH.currentUser === null){
 		window.location.href = "login.html";
@@ -32,7 +53,7 @@ function loadClasses(){
 		while(c.firstChild.nodeName !== c.lastChild.nodeName)
 			c.lastChild.remove();
 
-		var classes = snapshot.val().classes;
+		let classes = snapshot.val().classes;
 
 		for(var className in classes){
 			var h2 = document.createElement("h2");
