@@ -1,13 +1,19 @@
+function sanitize(HTMLObj){
+	HTMLObj.innerHTML = HTMLObj.innerHTML.replace(/[^\w| ]/ig, '');
+}
 function editMode(HTMLObj){
 	HTMLObj.onclick = (event) => {};
-	HTMLObj.innerHTML = "<textarea id='textarea' rows='1' cols='20' maxlength='18' style='resize: none'>" + HTMLObj.innerHTML + "</textarea> <span id='" + HTMLObj.innerHTML + "' onclick='save(this)'> &#10004 </span>";
+	HTMLObj.innerHTML = "<textarea id='textarea' rows='1' cols='20' maxlength='18' style='resize: none' onkeypress='sanitize(this)' onblur='sanitize(this)' onpaste='sanitize(this)'>" + HTMLObj.innerHTML + "</textarea> <span id='" + HTMLObj.innerHTML + "' onclick='save(this)'> &#10004 </span>";
 }
 function save(HTMLObj){
 	let p = HTMLObj.parentElement;
 	let PATH = '/' + AUTH.currentUser.uid + '/classes/' + HTMLObj.id;
-	let NEWPATH = '/' + AUTH.currentUser.uid + '/classes/' + p.getElementsByTagName('textarea')[0].value;
+	let NEWPATH = '/' + AUTH.currentUser.uid + '/classes/' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '');
 
-	p.outerHTML = '<h2>' + p.getElementsByTagName('textarea')[0].value + '</h2>';
+	p.outerHTML = '<h2>' + p.getElementsByTagName('textarea')[0].value.replace(/[^\w| ]/ig, '') + '</h2>';
+
+	if(!p.getElementsByTagName('textarea')[0].value.length)
+		return alert("Error: Class name cannot be empty!");
 
 	DB.ref(PATH).once('value').then(function(snapshot) {
 		let pstudents = snapshot.val().students;
@@ -21,7 +27,8 @@ function save(HTMLObj){
 					loadClasses();
 				});
 			}else{
-				alert("Error: Conflicting class names.")
+				if(PATH !== NEWPATH)
+					alert("Error: Conflicting class names.")
 				loadClasses();
 			}
 		});
@@ -33,12 +40,12 @@ function newClass(){
 	DB.ref('/' + AUTH.currentUser.uid).once('value').then(function(snapshot) {
 		let classes = snapshot.val().classes;
 		let n = 1;
-		while(classes[("New Class #" + n)])
+		while(classes[("New Class No" + n)])
 			n ++;
-		DB.ref('/' + AUTH.currentUser.uid + '/classes/New Class #' + n).set({
+		DB.ref('/' + AUTH.currentUser.uid + '/classes/New Class No' + n).set({
 			students: ["#0001", "#0002", "#0003"]
 		}).then(() => {
-			console.log("Created new class [New Class #" + n + "]");
+			console.log("Created new class [New Class No" + n + "]");
 			loadClasses();
 		});
 	});
