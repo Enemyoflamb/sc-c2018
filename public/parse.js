@@ -1,9 +1,20 @@
+var cooldowns = {};
+
 function sanitize(HTMLObj){
 	HTMLObj.innerHTML = HTMLObj.innerHTML.replace(/[^\w| ]/ig, '');
 }
 function editMode(HTMLObj){
 	HTMLObj.onclick = (event) => {};
 	HTMLObj.parentElement.innerHTML = "<textarea id='textarea' rows='1' cols='34' maxlength='32' style='resize: none' onkeypress='sanitize(this)' onblur='sanitize(this)' onpaste='sanitize(this)'>" + HTMLObj.innerHTML + "</textarea> <span id='" + HTMLObj.innerHTML + "' onclick='save(this)'> &#10004 </span>";
+}
+function manageMe(HTMLObj){
+	if(cooldowns[HTMLObj.id]){
+		localStorage.setItem("selected", HTMLObj.id);
+		window.location.href = "manage.html";
+	}else{
+		cooldowns[HTMLObj.id] = 1;
+		setTimeout(() => {cooldowns[HTMLObj.id] = 0;}, 200);
+	}
 }
 function save(HTMLObj){
 	let p = HTMLObj.parentElement;
@@ -75,8 +86,12 @@ function loadClasses(){
 			span.onclick = (function(event){
 				editMode(this);
 			});
+			div.onclick = (function(event){
+				manageMe(this);
+			});
 			h2.appendChild(span);
 			div.appendChild(h2);
+			div.id = className;
 			c.appendChild(div);/*
 			function changeClassName(){
 				h2.innerHTML = document.getElementById("textarea").value;

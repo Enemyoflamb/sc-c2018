@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<link rel="stylesheet" href="style.css" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Share:400,400i,700,700i" rel="stylesheet">
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<link rel="stylesheet" href="style2.css" type="text/css">
+<html lang='en' dir='ltr'>
   <head>
-    <meta charset="utf-8">
-    <header class="opener">
-    <div class="wrapper">
-      <h5 class = "smName">Smart Chart</h5>
-      <button class="logout"> Log-Out </button>
-
+    <link rel='stylesheet' href='style.css' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700|Poiret+One|Share' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Share:400,400i,700,700i' rel='stylesheet'>
+    <link href='https://afeld.github.io/emoji-css/emoji.css' rel='stylesheet'>
+    <link rel='stylesheet' href='style2.css' type='text/css'>
+    <meta charset='utf-8'>
+    <header class='opener'>
+    <div class='wrapper'>
+      <h5 class = 'smName'>Smart Chart</h5>
+      <button class='logout' onclick='exit()'> Log-Out </button>
     </div>
     </header>
     <title></title>
+    <script src='https://www.gstatic.com/firebasejs/4.8.0/firebase.js'></script>
+    <script src='interact.js'></script>
+    <script src='init.js'></script>
+    <script src='auth.js'></script>
+    <script src='write.js'></script>
+
+    <script src='libs/p5.min.js'></script>
+    <script src='render.js'></script>
   </head>
-  <body id="participation">
-    <button onclick="showMenu()" class="show" id="showMenu"> + Add Student </button>
-    <div class="hide" id="hideMenu">
-        <i class="em em-arrow_backward" onclick="hideMenu()" id="hideArrow"></i>
-      <div id="infoTab">
+  <body id='participation'>
+    <button onclick='addStudent()' class='show' id='showMenu'> + Add Student </button>
+    <div class='hide' id='hideMenu'>
+        <i class='em em-arrow_backward' onclick='hideMenu()' id='hideArrow'></i>
+      <div id='infoTab'>
 
         <h2> Student Info </h2>
       </div>
@@ -28,17 +35,15 @@
         <h3> Student Name </h3>
       </div>
     </div>
-    <div id="grid"></div>
-    <!--<button id="random" onclick=""> Randomize! </button>
-    <div id="verticalSpace">&nbsp </div>
-    <button id="generate" onclick=""> Generate! </button>-->
-    <button id="saveChanges" onclick=""> Save Changes</button>
-      <button id="saveExit" onclick=""> Save & Exit </button>
-    <!--  <div id="grid">
+    <!--<button id='random' onclick=''> Randomize! </button>
+    <div id='verticalSpace'>&nbsp </div>
+    <button id='generate' onclick=''> Generate! </button>-->
+    <button id='saveChanges' onclick=''> Save Changes</button>
+    <button id='saveExit' onclick='back();'> Save & Exit </button>
+    <!--  <div id='grid'>
         <table> <tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr><tr><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th> <th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th><th>&nbsp &nbsp&nbsp</th></tr> </table>
   -->
       </div>
     </div>
   </body>
-  <script src="interact.js"></script>
 </html>

@@ -1,14 +1,14 @@
 var show = document.getElementById('showMenu');
 var hide = document.getElementById('hideMenu');
 
-function showMenu(){
+/*function showMenu(){
   show.className = "hide";
   hide.className = "show";
 }
 function hideMenu(){
   show.className = "show";
   hide.className = "hide";
-}
+}*/
 
 /*function show(){
   var showelem= document.getElementsByClassName("hide")[0];
