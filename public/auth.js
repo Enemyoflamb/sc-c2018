@@ -16,7 +16,7 @@ function register(){
 		AUTH.signInWithEmailAndPassword(email, password).then(function(){
 			DB.ref('/' + AUTH.currentUser.uid).set({classes: {
 				"Sample Room": {
-					students: [], //["#0001", "#0002", "#0003", "#0004", "#0005"]
+					students: ["#"], //["#0001", "#0002", "#0003", "#0004", "#0005"]
 				}
 			}}).then(() => {
 				console.log('New user data initialized.');
