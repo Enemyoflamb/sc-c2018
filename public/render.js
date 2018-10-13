@@ -9,6 +9,7 @@ var selected = null;
 
 //var Person constructor // defined in write.js
 Person.prototype.draw = function() {
+    if(this.name.includes("#")) return; // hiding the testing stuff
     push();
     translate(this.x, this.y);
     fill(255, 255, 255, 100);
