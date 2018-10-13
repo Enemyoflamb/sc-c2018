@@ -1,26 +1,27 @@
 function setup(){
-    createCanvas(600, 600); 
+    createCanvas(600, 600);
+    strokeWeight(5);
+    textAlign(CENTER, CENTER);
 }
-
-strokeWeight(5);
 
 //var ppl = []; //defined in write.js
 var selected = null;
 
 //var Person constructor // defined in write.js
 Person.prototype.draw = function() {
-    pushMatrix();
+    push();
     translate(this.x, this.y);
     fill(255, 255, 255, 100);
     stroke(0, 0, 0, 100 + this.f);
     ellipse(0, 0, 50, 50);
-    fill(0, 0, 70, 100 + this.f);
-    text(this.name, 0, -30);
     noFill();
-    arc(0, 5, 14, 2, 20, 160);
+    arc(0, 5, 14, 2, 0.349066, 2.79253); //20deg - 160deg
     point(-15, 0);
     point(15, 0);
-    popMatrix();
+    noStroke();
+    fill(0, 0, 70, 100 + this.f);
+    text(this.name, 0, -35);
+    pop();
     this.px = this.x;
     this.py = this.y;
     this.x += this._x;
@@ -31,17 +32,17 @@ Person.prototype.draw = function() {
 };
 
 var mp = false;
-var mousePressed = function(){
+function mousePressed(){
     mp = true;
-};
-var mouseReleased = function(){
+}
+function mouseReleased(){
     selected = null;
-};
+}
 var k = 0;
-var draw = function() {
+function draw() {
     background(255, 255, 255);
     fill(0, 0, 0);
-    text(~~this.__frameRate+"FPS\n"+k, 100, 100);
+    //text(~~this.__frameRate+"FPS\n"+k, 100, 100);
     k = 0;
     if(selected){
         ppl[selected]._x = -(ppl[selected].x - mouseX) / 3;
@@ -63,10 +64,10 @@ var draw = function() {
                 ppl[i].f = 100;
             }
         }
-        if(Math.abs(ppl[i].x - 300) > 10+Math.min(frameCount,150)){
+        if(Math.abs(ppl[i].x - 300) > 301){
             ppl[i].x = ppl[i].px;
         }
-        if(Math.abs(ppl[i].y - 300) > 10+Math.min(frameCount,150)){
+        if(Math.abs(ppl[i].y - 300) > 301){
             ppl[i].y = ppl[i].py;
         }
         if(Math.abs(ppl[i].x - mouseX) < 25 & Math.abs(ppl[i].y - mouseY) < 25){

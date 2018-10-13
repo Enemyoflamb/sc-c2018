@@ -62,6 +62,9 @@ form {
   font-size: 1vw;
 }
 
+canvas {
+  border: 1px inline black;
+}
 #signUplead{
   border-radius: 2vw;
   border-color: #000000;
@@ -100,3 +103,10 @@ form {
   transform: rotate(-20deg);
   z-index: -2;
 } */
+
+
+canvas {
+  margin: 20px;
+  padding: 20px;
+  border: 4px ridge black;
+}

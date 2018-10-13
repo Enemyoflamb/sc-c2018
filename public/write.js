@@ -21,8 +21,9 @@ function loadStudents(){
 	PATH = '/' + AUTH.currentUser.uid + '/classes/' + className;
 	DB.ref(PATH).once('value').then(function(snapshot){
 		students = snapshot.val().students;
+    ppl = [];
 		for(var i = 0; i < students.length; i ++){
-			ppl.push(new Person(10 + 30 * (i % 6), 10 + 30 * ~~(i / 6), students[i]));
+			ppl.push(new Person(100 + 45 * (i % 8), 100 + 45 * ~~(i / 8), students[i]));
 		}
 	});
 }
@@ -30,7 +31,7 @@ function loadStudents(){
 function addStudent(){
 	let name = prompt("What is the name of the student you would like to add?");
   students.push(name);
-  ppl.push(new Person(600, 600, name))
+  ppl.push(new Person(500, 500, name))
   DB.ref(PATH).set({'students': students}).then(loadStudents);
 }
 function back(){
